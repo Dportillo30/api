@@ -15,4 +15,4 @@ jobs:
           heroku_api_key: "HRKU-e9727b0e-2552-40c3-8a79-b5030f36101a"
           heroku_app_name: "api-seguridad" #Must be unique in Heroku
           heroku_email: "dportillop1@miumg.edu.gt"
-          branch: "dev"
+          branch: "main"
