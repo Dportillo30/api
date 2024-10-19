@@ -1,13 +1,18 @@
-name: Heroku Deployment
-on: push
+name: Deploy
+
+on:
+  push:
+    branches:
+      - master # Changing the branch here would also work
+
 jobs:
-  heroku-deploy:
-    runs-on: ubuntu-latest
+  build:
+    runs-on: ubuntu-22.04
     steps:
-      — uses: actions/checkout@v2
-      — name: Deploy to Heroku
-        uses: akhileshns/heroku-deploy@v3.13.15
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.13.15 # This is the action
         with:
-          heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
-          heroku_app_name: ${{ secrets.HEROKU_APP_NAME }}
-          heroku_email: ${{ secrets.HEROKU_EMAIL }}
+          heroku_api_key: "HRKU-e9727b0e-2552-40c3-8a79-b5030f36101a"
+          heroku_app_name: "api-seguridad" #Must be unique in Heroku
+          heroku_email: "dportillop1@miumg.edu.gt"
+          branch: "dev"
